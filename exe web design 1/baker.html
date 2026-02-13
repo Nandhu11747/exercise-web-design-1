@@ -2,54 +2,228 @@
 <html>
     <head><title>Home baker</title>
     <style>
-          .head{
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        /*-----NAV BAR----*/
+        .head{
             display: flex;
             justify-content: flex-end;
+            gap:25px;
+            padding:20px 40px;
         
         }
-        p{
-            margin: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+       .head  p{
+           cursor: pointer;
+
+       }
         #order{
-            width: 100px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(239, 107, 58);
-            border: 1px solid black;
-            border-radius:20% ;
+           background-color: rgb(239, 107, 58);
+           padding: 10px 20px;
+           border-radius: 20px;
+           font-weight: 600;
         } 
+        /*-----hero section----*/
         .main{
             position: relative;
+            text-align: center;
+            
         }
         .main img{
+            width:100%;
+            max-height: 500px;
+            object-fit:initial;
             display: block;
-            position: relative;
-            left: 280px;
-            
         }
         .mhead{
             position: absolute;
             top: 30%;
             left: 50%;
             transform: translate(-50%,-50%);
+            color:#FFFFFF;
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-size: 42px;
+            padding: 10px 20px;
+        }
+        .shead{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color:#FFFFFF;
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-style:normal ;
+            font-size: 16px;
+            font-weight: 50;
+        }
+        .exp{
+
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(239, 107, 58);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /*----about section----*/
+
+        .content{
+            margin: 60px 0;
+            padding-left: 40px;
+        }
+        .det h2{
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .abt{
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 60px;
+        }
+        .popular{
+            margin: 50px 0;
+            padding-left: 40px;
+        }
+        .popitem h2{
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .items {
+            width: 465px;
+            height: 465px;
+            display: flex;
+                
+            
+        }
+        .items  img{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            padding: 20px;
+
+
+        }
+
+        .items figcaption{
+            text-align: left;
+            padding: 0px 20px;
+        }
+        
+
+        /*----products section----*/
+
+        .products{
+            margin: 50px 0px;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+
+
+        .menu{
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            font-family: Arial,sans-serif;
+        }
+        .menu th, .menu td{
+            padding: 12px 15px;
+            text-align: left;
+        }
+        .menu thead{
+            background-color: #fafafa;
+        }
+        .menu th{
+            font-weight: 600;
+            color: #333;
+        }
+        .menu tbody tr{
+            border-top: 1px solid #eee;
+        }
+        .menu tbody tr:hover{
+            background-color: #fafafa;
+        }
+        .menu td:last-child{
+            white-space: nowrap;
+            color:#444;
+        }
+
+        /*----contact section----*/
+
+        .contact{
+            width: 400px;
+            margin: 50px 0;
+        }
+
+        .info{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .info input, .info textarea{
+            width: 100%;
+            padding: 12px;
+            margin-bottom:20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e6e6e6;
+            font-size: 14px;
+        }
+        .info textarea{
+            height: 120px;
+            resize: none;
+        }
+        .info button{
+            background-color: #ff7a1a;
             color: white;
-            font-size: 50px;
-            font-weight: bold;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
         }
-        #abt{
-            justify-content: left;
+        .info button:hover{
+            background-color: #e66900;
         }
-        .det{
-            width:920px;
-            position: relative;
-            left:300px;
-            background-color: bisque;
+
+        /*----FAQs section----*/
+
+        .faq{
+           margin: 50px 0px;
+            padding-left: 40px;
+            margin: 20px 0;
+            
         }
+        .faq h2{
+            margin-bottom: 20px;
+        }
+        .faq-item{
+            background-color: #e6e6e6;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            width: 700px;
+            padding: 12px 16px;
+        }
+        .faq-item summary{
+            cursor: pointer;
+            font-weight: 500;
+            list-style: none;
+        }
+        .faq-item p{
+            margin-top: 10px;
+            font-size: 14px;
+            color: #444;
+        }
+
+
 
     </style>
     </head>
@@ -65,23 +239,122 @@
             </div>
         </header>
         <hr>
-        <main>
-            <div class="main">
+            <section class="main">
                 <img src="c:\Users\LENOVO\Downloads\selfStack doc\mainpic.png" alt="sample">
-                <h1 class="mhead">Exquisite Home-Baked Pastries</h1>
-            </div>
+                <h1 class="mhead">Exquisite Home-Baked Pastries</h1><br>
+
+                <p class="shead">Indulge in a delightful fusion of Indian and European flavours,crafted with love and the finest ingredients.</p>
+                <div class="exp">Explore Our Menu</div>
+            </section>
+            <main style="margin: 50px;">
+                <section class="content">
             <div class="det">
                 <h2>About Us</h2>
-                <p>At Sweet Delights,We blend the rich traditions of India and European baking to
-                    create unique and mouthwatering pastries.
-                </p>
-                <p>Our passion for quality and flavour shines through in every bite.We use only 
-                    the freshest,locally sourced ingredients to ensure a taste that's both authentic
-                    and unforgettable.
+            </div>
+            <div class="abt">
+                <p>
+                At Sweet Delights,We blend the rich traditions of India and European baking to
+                create unique and mouthwatering pastries
+                Our passion for quality and flavour shines through in every bite.We use only 
+                the freshest,locally sourced ingredients to ensure a taste that's both authentic
+                and unforgettable.
                 </p>
             </div>
-        
-        </main>
-        </div>
+            </section>
+            <section class="popular">
+            <div class="popitem">
+                <h2>Popular Items</h2>
+            </div>
+            <div class="items">
+                <div>
+                <img src="c:\Users\LENOVO\Downloads\selfStack doc\item1.png" alt="item1">
+                <figcaption><h3>Gulab Jamun Cheesecake</h3></figcaption>
+                <figcaption>A creamy cheesecake infused with the flavour of traditional Indian Gulab Jamun.</figcaption>
+                </div>
+                <div>
+                <img src="c:\Users\LENOVO\Downloads\selfStack doc\item2.png" alt="item2">
+                <figcaption><h3>Croissant with Almond Filling</h3></figcaption>
+                <figcaption>Flaky croissant with a rich almond cream,perfect for breakfast or a snack.</figcaption>
+                </div>
+                <div>
+                <img src="c:\Users\LENOVO\Downloads\selfStack doc\item3.png" alt="item3">
+                <figcaption><h3>Mango Lassi Panna Cotta</h3></figcaption>
+                <figcaption>A smooth and creamy panna cotta with the tropical taste of mango lassi.</figcaption>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="products">
+            <div class="popitems">
+                <h2>Our Products</h2>
+            </div>
+            <table class="menu">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Saffron Pistachio Macrons</td>
+                        <td>Delicate macrons with a saffron-infused shell and pistachio cream filling.</td>
+                        <td>$25/dozen</td>
+                    </tr>
+
+                    <tr>
+                        <td>Chai Spice Scones</td>
+                        <td>Warm scones infused with chai spices,perfect with tea or coffee.</td>
+                        <td>$15/half dozen</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lemon Lavender Tart</td>
+                        <td>A refreshing tart with tangy filling and a hint of lavender in a buttery crust.</td>
+                        <td>$28</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer>
+            <section class="products">
+                <div class="popitems">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="contact">
+                <form class="info">
+                    <label for="name">Name:</label><br>
+                    <input type="text" placeholder="Enter your name" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" placeholder="Enter your email" id="email" name="email"><br>
+                    <label for="message">Message:</label><br>
+                    <textarea placeholder="Enter your message" id="message" name="message"></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+                </div>
+            </section class="products">
+            <div class="faq">
+                <h2>FAQs</h2>
+                <details class="faq-item">
+                    <summary>Do you offer custom orders?</summary>
+                    <p>Yes,we love creating custom pastries! PLease contact us with your ideas and we'll work with youu to bring them to life.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What are your delivery options?</summary>
+                    <p>We offer loacal delivery and pickup options. Delivery charges may vary depending on location</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How far in advance should I place an order?</summary>
+                    <p>We recommend placing orders at least 48 hours in advance for custom items.</p>
+                </details>
+            </div>
+            </section>
+        </footer>
+            </main>
+            
     </body>
 </html>
