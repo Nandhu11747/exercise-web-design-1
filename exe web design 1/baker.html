@@ -1,242 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head><title>Home baker</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            
-        }
-        /*-----NAV BAR----*/
-        .head{
-            display: flex;
-            justify-content: flex-end;
-            gap:25px;
-            padding:20px 40px;
-        
-        }
-       .head  p{
-           cursor: pointer;
-
-       }
-        #order{
-           background-color: rgb(239, 107, 58);
-           padding: 10px 20px;
-           border-radius: 20px;
-           font-weight: 600;
-        } 
-        /*-----hero section----*/
-        .main{
-            position: relative;
-            text-align: center;
-            
-        }
-        .main img{
-            width:100%;
-            max-height: 500px;
-            object-fit:initial;
-            display: block;
-        }
-        .mhead{
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            color:#FFFFFF;
-            font-family: Plus Jakarta Sans, sans-serif;
-            font-size: 42px;
-            padding: 10px 20px;
-        }
-        .shead{
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            color:#FFFFFF;
-            font-family: Plus Jakarta Sans, sans-serif;
-            font-style:normal ;
-            font-size: 16px;
-            font-weight: 50;
-        }
-        .exp{
-
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgb(239, 107, 58);
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        /*----about section----*/
-
-        .content{
-            margin: 60px 0;
-            padding-left: 40px;
-        }
-        .det h2{
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .abt{
-            text-align: left;
-            line-height: 1.6;
-            margin-bottom: 60px;
-        }
-        .popular{
-            margin: 50px 0;
-            padding-left: 40px;
-        }
-        .popitem h2{
-            text-align: left;
-            margin-bottom: 20px;
-        }
-        .items {
-            width: 465px;
-            height: 465px;
-            display: flex;
-                
-            
-        }
-        .items  img{
-            width: 400px;
-            height: 400px;
-            object-fit: cover;
-            padding: 20px;
-
-
-        }
-
-        .items figcaption{
-            text-align: left;
-            padding: 0px 20px;
-        }
-        
-
-        /*----products section----*/
-
-        .products{
-            margin: 50px 0px;
-            padding-left: 40px;
-            margin: 20px 0;
-        }
-
-
-        .menu{
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            font-family: Arial,sans-serif;
-        }
-        .menu th, .menu td{
-            padding: 12px 15px;
-            text-align: left;
-        }
-        .menu thead{
-            background-color: #fafafa;
-        }
-        .menu th{
-            font-weight: 600;
-            color: #333;
-        }
-        .menu tbody tr{
-            border-top: 1px solid #eee;
-        }
-        .menu tbody tr:hover{
-            background-color: #fafafa;
-        }
-        .menu td:last-child{
-            white-space: nowrap;
-            color:#444;
-        }
-
-        /*----contact section----*/
-
-        .contact{
-            width: 400px;
-            margin: 50px 0;
-        }
-
-        .info{
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .info input, .info textarea{
-            width: 100%;
-            padding: 12px;
-            margin-bottom:20px;
-            border: none;
-            border-radius: 8px;
-            background-color: #e6e6e6;
-            font-size: 14px;
-        }
-        .info textarea{
-            height: 120px;
-            resize: none;
-        }
-        .info button{
-            background-color: #ff7a1a;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .info button:hover{
-            background-color: #e66900;
-        }
-
-        /*----FAQs section----*/
-
-        .faq{
-           margin: 50px 0px;
-            padding-left: 40px;
-            margin: 20px 0;
-            
-        }
-        .faq h2{
-            margin-bottom: 20px;
-        }
-        .faq-item{
-            background-color: #e6e6e6;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            width: 700px;
-            padding: 12px 16px;
-        }
-        .faq-item summary{
-            cursor: pointer;
-            font-weight: 500;
-            list-style: none;
-        }
-        .faq-item p{
-            margin-top: 10px;
-            font-size: 14px;
-            color: #444;
-        }
-
-
-
-    </style>
+         <link rel="stylesheet" href="stylebaker.css">
     </head>
     <body>
         <header>
-            <div class="head">
-                <p>Home</p>
-                <p>About</p>
-                <p>Menu</p>
-                <p>Contact</p>
-                <p>FAQs</p>
-                <p id="order">Order Now</p>
-            </div>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="c:\Users\LENOVO\Downloads\Vector - 0.png">
+                    <h2>Sweet Delights</h2>
+                </div>
+                <div class="nav-links">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Menu</p>
+                    <p>Contact</p>
+                    <p>FAQs</p>
+                    <button class="order">Order Now</button>
+                </div>
+            </nav>
         </header>
         <hr>
             <section class="main">
@@ -318,9 +100,8 @@
                 </tbody>
             </table>
         </section>
-        <footer>
-            <section class="products">
-                <div class="popitems">
+           
+                <div class="popitem1">
                     <h2>Contact Us</h2>
                 </div>
                 <div class="contact">
@@ -353,8 +134,22 @@
                 </details>
             </div>
             </section>
-        </footer>
-            </main>
-            
+        </main>
+            <footer class="footer">
+                <div class="footer-top">
+                    <p class="left">Privacy Policy</p>
+
+                    <div class="socials">
+                        <img src="c:\Users\LENOVO\Downloads\instagram.png" alt="Instagram">
+                        <img src="c:\Users\LENOVO\Downloads\facebook-app-symbol.png" alt="Facebook">
+                    </div>
+
+                    <p class="right">Term Of Service</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2024 Sweet Delights. All rights reserved.</p>
+                </div>
+            </footer>
     </body>
 </html>
