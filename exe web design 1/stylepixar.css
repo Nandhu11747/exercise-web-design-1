@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: white;
 }
 
 /*-----NAV BAR----*/
@@ -12,7 +12,7 @@ body{
     align-items: center;
     padding: 18px 40px;
     margin:0%;
-    background-color:#f5f5f5;
+    background-color:white;
     font-style: normal;
     height: 80px;
    
@@ -49,7 +49,7 @@ body{
 
 .hero{
     height: 90vh;
-    background-color: #f5f5f5;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,13 +65,24 @@ body{
    width: 100%;
    height: 90%;
    object-fit: cover;
+   cursor: pointer;
    
     
 }
 
 /*----GRID SECTION----*/
 
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 .gridlay{
+    animation: fade-in  linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
     display: grid;
     grid-template-columns: 1fr 1.1fr 1.1fr;
     gap: 10px;
@@ -82,21 +93,26 @@ body{
     width:100%;
     height:100%;
     object-fit: cover;
+    cursor: pointer;
 }
 .banner{
+    animation: slideIn 3s ease-out forwards;
     grid-column: 1 / 4;
 
 }
 .small{
+    animation: slideIn 3s ease-out forwards;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 
 }
 .small2{
+    animation: slideIn 3s ease-out forwards;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 }
 .medium{
+    animation: slideIn 3s ease-out forwards;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
     position: relative;
@@ -145,18 +161,26 @@ body{
 /*-----Footer-----*/
 
 .footer{
-    background-color: #f3f3f3;
-    padding: 80px 100px 40px;
+    background: white;
+    padding:90px 0 40px;
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    background-color:#f5f5f5;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 300px;
 }
 .socials{
     display:flex;
     gap: 25px;
     align-items: center;
+    padding-left: 200px;
+    padding-top: 125px;
+
 }
 
 .socials img {
@@ -169,11 +193,16 @@ body{
 .footer-column{
     display: flex;
     gap: 100px;
+    padding-right: 200px;
+    padding-top: 60px;
+    line-height: 8px;
 }
 .column h4{
     font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: 0.5em;
     margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 .column a{
     display: block;
@@ -181,6 +210,7 @@ body{
     color: black;
     margin-bottom: 10px;
     font-size: 14px;
+    color: #333333;
 }
 .footer-bottom{
     text-align: center;
